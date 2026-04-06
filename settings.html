@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+<body>
+
+<!-- Top Navbar -->
+<nav class="top-navbar">
+    <div class="nav-left">
+        <h2 class="logo">TO DO Manager</h2>
+    </div>
+    <div class="nav-right">
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="task.html" class="nav-link">Tasks</a>
+        <a href="category.html" class="nav-link">Category</a>
+        <a href="calendar.html" class="nav-link">Calendar</a>
+        <a href="notes.html" class="nav-link">Notes</a>
+        <a href="settings.html" class="nav-link active">Settings</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Settings</h1>
+        <p>Manage your tasks, data and preferences</p>
+    </header>
+
+    <!-- Settings Grid -->
+    <section class="settings-grid">
+
+        <!-- Clear All Tasks Card -->
+        <div class="glass-card">
+            <h2>Task Management</h2>
+            <p>Remove all tasks permanently from your task manager.</p>
+            <button id="clearTasksBtn" class="danger-btn">
+                🗑 Clear All Tasks
+            </button>
+        </div>
+
+        <!-- Export Tasks Card -->
+        <div class="glass-card">
+            <h2>Export Tasks</h2>
+            <p>Download all your tasks as a backup JSON file.</p>
+            <button id="exportBtn" class="primary-btn">
+                ⬇ Export Tasks
+            </button>
+        </div>
+
+        <!-- Import Tasks Card -->
+        <div class="glass-card">
+            <h2>Import Tasks</h2>
+            <p>Upload a JSON file to restore your tasks.</p>
+            <input type="file" id="importFile" accept=".json" hidden>
+            <button id="importBtn" class="primary-btn">
+                ⬆ Import Tasks
+            </button>
+        </div>
+
+        <!-- Recent Activity Panel -->
+        <div class="glass-card activity-card">
+           <div class="activity-header">
+    <h2>Recent Activity</h2>
+    <button id="clearHistoryBtn" class="danger-btn">
+        Clear History
+    </button>
+</div>
+
+<div class="activity-list">
+    <div class="activity-item">
+        <span>Last Added Task:</span>
+        <span id="lastAdded">No activity</span>
+    </div>
+
+    <div class="activity-item">
+        <span>Last Completed Task:</span>
+        <span id="lastCompleted">No activity</span>
+    </div>
+
+    <div class="activity-item">
+        <span>Deleted Tasks:</span>
+        <ul id="deletedHistory"></ul>
+    </div>
+</div>
+        </div>
+        
+
+    </section>
+</div>
+
+<script src="js/settings.js"></script>
+</body>
+</html>

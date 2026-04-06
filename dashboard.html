@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<!--  TOP NAVBAR  -->
+<nav class="navbar">
+    <div class="nav-left">
+        <h2 class="logo">TO DO Manager</h2>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="task.html">Tasks</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="settings.html">Settings</a></li>
+    </ul>
+</nav>
+
+<!--  MAIN CONTAINER -->
+<div class="container">
+
+    <!-- Header -->
+    <div class="header glass-card">
+        <h1>Productivity Dashboard</h1>
+        <p>Track your progress, tasks & daily productivity</p>
+    </div>
+
+    <!-- STATISTICS CARDS  -->
+    <div class="stats-grid">
+        <div class="stat-card glass-card total">
+            <h3>Total Tasks</h3>
+            <p id="totalTasks">0</p>
+        </div>
+
+        <div class="stat-card glass-card pending">
+            <h3>Pending Tasks</h3>
+            <p id="pendingTasks">0</p>
+        </div>
+
+        <div class="stat-card glass-card completed">
+            <h3>Completed Tasks</h3>
+            <p id="completedTasks">0</p>
+        </div>
+
+        <div class="stat-card glass-card priority">
+            <h3>High Priority</h3>
+            <p id="highPriority">0</p>
+        </div>
+    </div>
+
+    <!--  PROGRESS + CHART SECTION  -->
+    <div class="grid-2">
+        <div class="glass-card">
+            <h2>Task Completion Progress</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text" id="progressText">0% Completed</p>
+        </div>
+
+        <div class="glass-card">
+            <h2>Task Distribution</h2>
+            <canvas id="taskChart"></canvas>
+        </div>
+    </div>
+
+    <!--  TODAY FOCUS SECTION  -->
+    <div class="focus-section glass-card">
+        <h2>Today's Focus</h2>
+
+        <div class="focus-grid">
+            <div class="focus-card">
+                <h3>Today's Tasks</h3>
+                <ul id="todayTasks"></ul>
+            </div>
+
+            <div class="focus-card">
+                <h3>Upcoming Tasks</h3>
+                <ul id="upcomingTasks"></ul>
+            </div>
+
+            <div class="focus-card">
+                <h3>Completed Today</h3>
+                <ul id="completedToday"></ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

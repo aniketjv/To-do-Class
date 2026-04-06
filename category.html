@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+    <!--  TOP NAVBAR (Same Theme, Minimal Change)  -->
+<header class="top-navbar">
+    <div class="nav-left">
+        <h2 class="nav-logo">To Do Manager</h2>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="task.html">Tasks</a>
+        <a href="category.html" class="active">Categories</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="notes.html">Notes</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+</header>
+
+<div class="container">
+    <header class="header">
+        <h1>Category Manager</h1>
+        <p>Organize your tasks with beautiful color-coded categories</p>
+    </header>
+
+    <!-- Create Category Card -->
+    <section class="glass-card create-card">
+        <h2>Create New Category</h2>
+        <div class="create-form">
+            <input type="text" id="categoryName" placeholder="Enter category name (Work, Study, Personal)">
+            <input type="color" id="categoryColor" value="#6366f1">
+            <button id="addCategoryBtn">+ Add Category</button>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="glass-card stats-card">
+        <h2> Category Statistics</h2>
+        <div class="stats-grid" id="statsGrid"></div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="glass-card filter-card">
+        <h2> Filter Tasks by Category</h2>
+        <div class="filter-buttons" id="filterButtons">
+            <button class="filter-btn active" data-category="all">All</button>
+        </div>
+    </section>
+
+    <!-- Category List -->
+    <section class="category-grid" id="categoryGrid">
+        <!-- Categories will render here -->
+    </section>
+</div>
+
+<script src="js/category.js">
+    
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+}
+
+</script>
+</body>
+</html>

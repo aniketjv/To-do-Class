@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/task.css" />
+</head>
+<body>
+
+  <!-- TOP NAVBAR  -->
+  <header class="navbar">
+    <div class="nav-left">
+      <h2 class="logo">TO-DO Manager</h2>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="tasks.html" class="active">Tasks</a>
+      <a href="category.html">Category</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="notes.html">Notes</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
+
+  <!--  MAIN CONTENT  -->
+  <main class="container">
+
+    <!-- Header + Search -->
+    <section class="top-bar">
+      <h1>Task Manager</h1>
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search by name, description, category, or priority..."
+      />
+    </section>
+
+    <!-- Add Task Card -->
+    <section class="add-task-card">
+      <h2>Add New Task</h2>
+
+      <div class="form-row">
+        <input type="text" id="taskTitle" placeholder="Task Title" />
+        <input type="date" id="taskDate" />
+
+        <select id="taskPriority">
+          <option value="low">Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+
+        <input type="text" id="taskCategory" placeholder="Category (Work, Study, Personal)" />
+      </div>
+
+      <textarea 
+        id="taskDescription" 
+        placeholder="Task Description (details, notes, checklist etc.)"
+        rows="3"
+      ></textarea>
+
+      <button id="addTaskBtn" class="add-btn">+ Add Task</button>
+    </section>
+
+    <!-- Task List -->
+    <section class="task-section">
+      <h2>Your Tasks</h2>
+      <div id="taskList" class="task-list"></div>
+    </section>
+
+  </main>
+
+  <script src="js/task.js"></script>
+</body>
+</html>

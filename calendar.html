@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/calendar.css">
+</head>
+<body>
+
+<!--  TOP NAVBAR (Same Theme)  -->
+<nav class="navbar">
+    <div class="nav-left">
+        <h2 class="logo">TO DO Manager</h2>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="task.html">Tasks</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="calendar.html" class="active">Calendar</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="settings.html">Settings</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTAINER  -->
+<div class="container">
+    
+    <!-- Header -->
+    <div class="page-header glass-card">
+        <h1>Calendar Scheduler</h1>
+        <p>Visualize your tasks, deadlines & productivity timeline</p>
+    </div>
+
+    <!-- Calendar Controls -->
+    <div class="calendar-controls glass-card">
+        <button id="prevMonth">← Previous</button>
+        <h2 id="monthYear"></h2>
+        <button id="nextMonth">Next →</button>
+    </div>
+
+    <!-- Calendar Grid -->
+    <div class="calendar-card glass-card">
+        <div class="calendar">
+            <!-- Week Days -->
+            <div class="day-name sunday">Sun</div>
+            <div class="day-name">Mon</div>
+            <div class="day-name">Tue</div>
+            <div class="day-name">Wed</div>
+            <div class="day-name">Thu</div>
+            <div class="day-name">Fri</div>
+            <div class="day-name">Sat</div>
+
+            <!-- Dates will render here -->
+            <div id="calendarDates" class="calendar-dates"></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/calendar.js"></script>
+</body>
+</html>
